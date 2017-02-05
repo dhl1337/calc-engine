@@ -54,5 +54,16 @@ public class Main {
         for (int iValG = 1; iValG < 100; iValG++) {
             System.out.println(iValG);
         }
+
+        // array example
+        float[] theVals = {12.0f, 32.0f, 42.0f};
+
+        float sum = 0.0f;
+
+        for(float currentVal: theVals)
+            sum += currentVal;
+
+        System.out.println("SUM " + sum);
+
     }
 }
