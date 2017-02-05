@@ -23,5 +23,20 @@ public class Main {
         }
 
         System.out.println(result);
+
+        int kVal = 5;
+        int factorial = 1;
+
+        // with block statement
+//        while(kVal > 1) {
+//            factorial *= kVal;
+//            kVal -= 1;
+//        }
+
+        // without block statement;
+        while(kVal > 1)
+            factorial *= kVal--;
+
+        System.out.println("Factorial " + factorial);
     }
 }
