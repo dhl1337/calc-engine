@@ -39,6 +39,8 @@ public class Main {
 
         System.out.println("Factorial " + factorial);
 
+
+        // do loop example
         int iVal = 5;
         do {
             System.out.print(iVal);
@@ -46,5 +48,11 @@ public class Main {
             iVal *= 2;
             System.out.println(iVal);
         } while(iVal < 30);
+
+        // for loop example
+
+        for (int iValG = 1; iValG < 100; iValG++) {
+            System.out.println(iValG);
+        }
     }
 }
