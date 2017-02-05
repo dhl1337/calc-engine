@@ -3,26 +3,41 @@ package com.pluralsight.calcengine;
 public class Main {
 
     public static void main(String[] args) {
-        double var1 = 100.0d;
-        double val2 = 0.0d;
-        double result;
+        double[] leftVals = {100.0d, 25.0d, 225.d, 11.0d};
+        double[] rightVals = {50.0d, 92.0d, 17.0d, 3.0d};
+        char[] opCodes = {'d', 'a', 's', 'm'};
+        double[] results = new double[opCodes.length];
 
-        char opCode = 'd';
+//        double var1 = 100.0d;
+//        double val2 = 0.0d;
+//        double result;
+//        char opCode = 'd';
 
-        if (opCode == 'a') {
-            result = var1 + val2;
-        } else if (opCode == 's') {
-            result = var1 - val2;
-        } else if (opCode == 'd') {
-            result = val2 != 0.0d ? var1 / val2 : 0.0d;
-        } else if (opCode == 'm') {
-            result = var1 * val2;
-        } else {
-            System.out.println("Error - invalide code");
-            result = 0.0d;
+        for (int i = 0; i < opCodes.length; i++) {
+            switch (opCodes[i]) {
+                case 'a':
+                    results[i] = leftVals[i] + rightVals[i];
+                    break;
+                case 's':
+                    results[i] = leftVals[i] - rightVals[i];
+                    break;
+                case 'd':
+                    results[i] = rightVals[i] != 0.0d ? leftVals[i] / rightVals[i] : 0.0d;
+                    break;
+                case 'm':
+                    results[i] = rightVals[i] * leftVals[i];
+                    break;
+                default:
+                    System.out.println("Error - invalide code");
+                    results[i] = 0.0d;
+                    break;
+            }
         }
 
-        System.out.println(result);
+        for (double theResult : results) {
+            System.out.print("the result = ");
+            System.out.println(theResult);
+        }
 
         int kVal = 5;
         int factorial = 1;
@@ -34,7 +49,7 @@ public class Main {
 //        }
 
         // without block statement;
-        while(kVal > 1)
+        while (kVal > 1)
             factorial *= kVal--;
 
         System.out.println("Factorial " + factorial);
@@ -47,7 +62,7 @@ public class Main {
             System.out.print(" * 2 = ");
             iVal *= 2;
             System.out.println(iVal);
-        } while(iVal < 30);
+        } while (iVal < 30);
 
         // for loop example
 
@@ -60,13 +75,13 @@ public class Main {
 
         float sum = 0.0f;
 
-        for(float currentVal: theVals)
+        for (float currentVal : theVals)
             sum += currentVal;
 
         System.out.println("SUM " + sum);
 
         int switchIVal = 10;
-        switch(switchIVal % 2) {
+        switch (switchIVal % 2) {
             case 0:
                 System.out.print(switchIVal);
                 System.out.print(" is even");
