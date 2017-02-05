@@ -38,5 +38,13 @@ public class Main {
             factorial *= kVal--;
 
         System.out.println("Factorial " + factorial);
+
+        int iVal = 5;
+        do {
+            System.out.print(iVal);
+            System.out.print(" * 2 = ");
+            iVal *= 2;
+            System.out.println(iVal);
+        } while(iVal < 30);
     }
 }
