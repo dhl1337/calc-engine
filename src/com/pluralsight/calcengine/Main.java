@@ -18,7 +18,7 @@ public class Main {
         for (MathEquation equation : equations) {
             equation.execute();
             System.out.print("the result = ");
-            System.out.println(equation.result);
+            System.out.println(equation.getResult());
         }
 
 //        int kVal = 5;
@@ -82,9 +82,9 @@ public class Main {
     public static MathEquation create(double leftVal, double rightVal, char opCode) {
         MathEquation equation = new MathEquation();
 
-        equation.leftVal = leftVal;
-        equation.rightVal = rightVal;
-        equation.opCode = opCode;
+        equation.setLeftVal(leftVal);
+        equation.setRightVal(rightVal);
+        equation.setOpCode(opCode);
 
         return equation;
     }
