@@ -65,5 +65,20 @@ public class Main {
 
         System.out.println("SUM " + sum);
 
+        int switchIVal = 10;
+        switch(switchIVal % 2) {
+            case 0:
+                System.out.print(switchIVal);
+                System.out.print(" is even");
+                break;
+            case 1:
+                System.out.print(switchIVal);
+                System.out.print(" is odd");
+                break;
+            default:
+                System.out.println("oops it broke");
+                break;
+        }
+
     }
 }
